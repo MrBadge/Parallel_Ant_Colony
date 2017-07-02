@@ -1,0 +1,6 @@
+.idea
+out
+#*.txt
+lib
+*.pyc
+venv

@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Directions service</title>
+
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+</head>
+<body>
+<div id="floating-panel">
+    <input type="file" id="fileinput"/>
+    <input type='button' id='btnLoad' value='Load' onclick='handleFileSelect();'>
+    <br>
+    <input type="checkbox" name="agree" value="1" id="without_routes" checked><span style="font-size: 11px;">Не строить маршруты</span>
+    {% csrf_token %}
+</div>
+<div id="map"></div>
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA20nUnH7noBCwMAFaG150mheOakPqngVg&signed_in=true&callback=initMap"
+        ></script>
+<script src="https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerwithlabel/src/markerwithlabel.js"></script>
+<div class="modal"></div>
+</body>
+</html>

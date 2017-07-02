@@ -1,0 +1,13 @@
+#Heuristics' function weighting settings (corresponding powers)
+pheromone_exp=1
+distance_exp=0.6
+f_exp=0.4
+w_exp=0.8
+savings_exp=0.9
+
+#Savings heuristic
+savings_heuristic_f_coeff=2
+savings_heuristic_g_coeff=2
+
+#F heuristic
+f_heuristic_delta_coeff=0.01
